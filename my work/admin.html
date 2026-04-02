@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard - ForgePeptides</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">ForgePeptides</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="research-peptides.html">Research Peptides</a>
+            <a href="stacks.html">Stacks</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <button class="logout-btn" onclick="handleLogout()">Logout</button>
+    </div>
+</nav>
+
+<div class="admin-container">
+    <!-- HEADER -->
+    <div class="admin-header">
+        <h1>👨‍💼 Admin Dashboard</h1>
+        <p>Monitor visitors, registrations, and manage products</p>
+    </div>
+
+    <!-- STATISTICS -->
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h3>👥 Total Visitors</h3>
+            <p class="stat-number" id="totalVisitors">0</p>
+            <p class="stat-label">This month</p>
+        </div>
+        <div class="stat-card">
+            <h3>📝 Total Registrations</h3>
+            <p class="stat-number" id="totalRegistrations">0</p>
+            <p class="stat-label">Registered users</p>
+        </div>
+        <div class="stat-card">
+            <h3>🔑 Total Logins</h3>
+            <p class="stat-number" id="totalLogins">0</p>
+            <p class="stat-label">Login count</p>
+        </div>
+        <div class="stat-card">
+            <h3>💰 Revenue</h3>
+            <p class="stat-number" id="totalRevenue">$0</p>
+            <p class="stat-label">From orders</p>
+        </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="admin-tabs">
+        <button class="tab-btn active" onclick="switchTab('visitors')">👁️ Visitor Tracking</button>
+        <button class="tab-btn" onclick="switchTab('registrations')">📋 Registrations</button>
+        <button class="tab-btn" onclick="switchTab('logins')">🔑 Logins</button>
+        <button class="tab-btn" onclick="switchTab('products')">📦 Products</button>
+        <button class="tab-btn" onclick="switchTab('orders')">🛍️ Orders</button>
+    </div>
+
+    <!-- VISITOR TRACKING -->
+    <section id="visitors" class="tab-content active">
+        <div class="section-header">
+            <h2>👁️ Visitor Tracking</h2>
+            <button onclick="clearVisitors()" class="danger-btn">Clear All Visitors</button>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>User Agent</th>
+                        <th>Viewed Status</th>
+                    </tr>
+                </thead>
+                <tbody id="visitorsTable">
+                    <tr><td colspan="3" style="text-align: center; color: #888;">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- REGISTRATIONS -->
+    <section id="registrations" class="tab-content">
+        <div class="section-header">
+            <h2>📋 User Registrations</h2>
+            <button onclick="exportRegistrations()" class="primary-btn">📥 Export CSV</button>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Registered Date</th>
+                        <th>Orders</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="registrationsTable">
+                    <tr><td colspan="5" style="text-align: center; color: #888;">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- LOGINS -->
+    <section id="logins" class="tab-content">
+        <div class="section-header">
+            <h2>🔑 Login History</h2>
+            <button onclick="clearLogins()" class="danger-btn">Clear Login History</button>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Login Time</th>
+                        <th>Device</th>
+                    </tr>
+                </thead>
+                <tbody id="loginsTable">
+                    <tr><td colspan="3" style="text-align: center; color: #888;">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="tab-content">
+        <div class="section-header">
+            <h2>📦 Product Management</h2>
+        </div>
+
+        <div class="product-form">
+            <h3>Add New Product</h3>
+            <div class="form-group">
+                <input id="name" placeholder="Product Name" type="text">
+                <input id="price" placeholder="Price (numbers only)" type="number" min="0" step="0.01">
+                <input id="description" placeholder="Description" type="text">
+                <button onclick="addProduct()" class="primary-btn">➕ Add Product</button>
+            </div>
+        </div>
+
+        <h3 style="margin-top: 2rem;">Product List</h3>
+        <div id="list"></div>
+    </section>
+
+    <!-- ORDERS -->
+    <section id="orders" class="tab-content">
+        <div class="section-header">
+            <h2>🛍️ Order History</h2>
+            <button onclick="exportOrders()" class="primary-btn">📥 Export CSV</button>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Total</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="ordersTable">
+                    <tr><td colspan="5" style="text-align: center; color: #888;">Loading...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 ForgePeptides Admin. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

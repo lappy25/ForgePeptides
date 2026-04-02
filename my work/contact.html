@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - ForgePeptides</title>
+<link rel="stylesheet" href="contact.css">
+</head>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">ForgePeptides</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="research-peptides.html">Research Peptides</a>
+            <a href="stacks.html">Stacks</a>
+            <a href="contact.html" class="active">Contact Us</a>
+            <a href="faq.html">FAQ</a>            <a href="about.html">About Us</a>        </div>
+        <div class="nav-buttons">
+            <div class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="count">0</span>)</div>
+            <a href="auth.html" class="signin-btn">Sign In</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Contact Us</h1>
+    <p>Get in touch with our expert team for personalized guidance</p>
+</section>
+
+<section class="contact-content">
+    <div class="contact-grid">
+        <div class="contact-info">
+            <h2>Get In Touch</h2>
+            
+            <div class="contact-item">
+                <h3>📧 Email</h3>
+                <p>Jonathandavide73@gmail.com</p>
+                <p>orders@forgepeptides.com</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>📱 WhatsApp</h3>
+                <p>+1 (908) 570-1335</p>
+                <p>Available 24/7 for orders</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Business Hours</h3>
+                <p>Monday - Friday: 8:00 AM - 6:30 PM EST</p>
+                <p>Saturday: 10:00 AM - 4:00 PM EST</p>
+                <p>Available through the week</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>Location</h3>
+                <p>Based in the United States</p>
+                <p>Worldwide Shipping Available</p>
+            </div>
+            
+            <div class="contact-item">
+                <h3>🚚 Shipping</h3>
+                <p>Discreet packaging</p>
+                <p>Tracking provided for all orders</p>
+                <p>International shipping available</p>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <h2>Send us a Message</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-grid">
+        <div class="faq-item">
+            <h3>How long does shipping take?</h3>
+            <p>Domestic orders typically arrive within 3-5 business days. International orders take 7-14 business days depending on the destination.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Do you offer international shipping?</h3>
+            <p>Yes, we ship worldwide. All packages are discreetly packaged and shipped with tracking. Import duties may apply for international orders.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>What payment methods do you accept?</h3>
+            <p>We accept major credit cards, PayPal, and cryptocurrency payments for enhanced privacy and security.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Are your products research-grade?</h3>
+            <p>Yes, all our peptides are research-grade quality. They are intended for research purposes only and not for human consumption.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>Do you provide product information?</h3>
+            <p>Yes, we provide detailed product information, usage guidelines, and research references. Our team is available to answer questions.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3>What is your return policy?</h3>
+            <p>We offer a 30-day return policy for unopened products. Please contact us before returning any items.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="research-peptides.html">Research Peptides</a>
+            <a href="stacks.html">Stacks</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="admin.html">Admin</a>
+        </div>
+        <p>&copy; 2026 ForgePeptides. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- CART PANEL -->
+<div class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3>Total: $<span id="total">0</span></h3>
+
+    <button onclick="checkout()">Checkout (WhatsApp)</button>
+    <button onclick="clearCart()" style="margin-top:10px; background:#ff4d4f; color:#fff;">Clear Cart</button>
+</div>
+
+<script src="cart.js"></script>
+<script src="contact.js"></script>
+
+</body>
+</html>

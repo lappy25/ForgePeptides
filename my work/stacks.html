@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peptide Stacks - ForgePeptides</title>
+<link rel="stylesheet" href="stacks.css">
+</head>
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">ForgePeptides</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="research-peptides.html">Research Peptides</a>
+            <a href="stacks.html" class="active">Stacks</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+            <a href="about.html">About Us</a>
+        </div>
+        <div class="nav-buttons">
+            <div class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="count">0</span>)</div>
+            <a href="auth.html" class="signin-btn">Sign In</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Peptide Stacks</h1>
+    <p>Scientifically formulated combinations for optimal research and clinical outcomes.</p>
+</section>
+
+<section class="stacks">
+    <h2>Popular Stacks</h2>
+    <p class="subtitle">Each stack is verified for purity, dose accuracy, and compatibility. Selected for research-grade efficacy and lab reliability.</p>
+    <div class="stack-grid">
+
+        <div class="stack-card">
+            <h3>Recovery Stack</h3>
+            <div class="price">$180</div>
+            <div class="description">
+                Comprehensive recovery protocol designed for athletes and active individuals. Accelerates healing, reduces inflammation, and promotes tissue regeneration.
+            </div>
+            <div class="peptides">
+                <h4>Included Peptides:</h4>
+                <ul>
+                    <li>BPC-157 (2mg)</li>
+                    <li>TB-500 (2mg)</li>
+                    <li>GHK-Cu (100mg)</li>
+                </ul>
+            </div>
+            <button onclick="addToCart('Recovery Stack (BPC-157 + TB-500 + GHK-Cu)',180)">Add to Cart</button>
+        </div>
+
+        <div class="stack-card">
+            <h3>Muscle Growth Stack</h3>
+            <div class="price">$220</div>
+            <div class="description">
+                Advanced anabolic stack combining growth hormone secretagogues with muscle repair peptides. Optimized for hypertrophy and strength gains.
+            </div>
+            <div class="peptides">
+                <h4>Included Peptides:</h4>
+                <ul>
+                    <li>CJC-1295 (2mg)</li>
+                    <li>Ipamorelin (2mg)</li>
+                    <li>MGF (1mg)</li>
+                </ul>
+            </div>
+            <button onclick="addToCart('Muscle Growth Stack (CJC-1295 + Ipamorelin + MGF)',220)">Add to Cart</button>
+        </div>
+
+        <div class="stack-card">
+            <h3>Anti-Aging Stack</h3>
+            <div class="price">$140</div>
+            <div class="description">
+                Comprehensive rejuvenation protocol targeting skin health, tissue repair, and overall vitality. Research-backed for anti-aging benefits.
+            </div>
+            <div class="peptides">
+                <h4>Included Peptides:</h4>
+                <ul>
+                    <li>GHK-Cu (200mg)</li>
+                    <li>Epithalamin (10mg)</li>
+                    <li>Selank (5mg)</li>
+                </ul>
+            </div>
+            <button onclick="addToCart('Anti-Aging Stack (GHK-Cu + Epithalamin + Selank)',140)">Add to Cart</button>
+        </div>
+
+        <div class="stack-card">
+            <h3>Performance Stack</h3>
+            <div class="price">$195</div>
+            <div class="description">
+                Elite performance enhancement stack for competitive athletes. Combines recovery, growth, and endurance optimization.
+            </div>
+            <div class="peptides">
+                <h4>Included Peptides:</h4>
+                <ul>
+                    <li>BPC-157 (2mg)</li>
+                    <li>CJC-1295 (2mg)</li>
+                    <li>TB-500 (2mg)</li>
+                </ul>
+            </div>
+            <button onclick="addToCart('Performance Stack (BPC-157 + CJC-1295 + TB-500)',195)">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="lab-verify">
+    <div class="lab-box">
+        <h2>Lab Quality Verification</h2>
+        <p>All stacks are assembled with vials certified in THL-certified laboratories (ISO 17025). Each lot includes Certificate of Analysis (CoA), purity report, and handling instructions.</p>
+        <ul>
+            <li>Purity range 98%+ to 99.9%</li>
+            <li>Stability tested for refrigerated / room-temp storage per product guide</li>
+            <li>Batch-specific HPLC & MS results available via QR code</li>
+            <li>Lot number tracking for traceability</li>
+        </ul>
+    </div>
+</section>
+
+<section class="benefits-section">
+    <h2>Stack Benefits</h2>
+    <div class="benefits-grid">
+        <div class="benefit-item">
+            <h3>Synergistic Effects</h3>
+            <p>Peptides work together to amplify results beyond individual use, maximizing your outcomes</p>
+        </div>
+        <div class="benefit-item">
+            <h3>Optimized Dosages</h3>
+            <p>Scientifically balanced ratios for maximum effectiveness and safety</p>
+        </div>
+        <div class="benefit-item">
+            <h3>Convenience</h3>
+            <p>All-in-one solutions save time and ensure proper combinations every time</p>
+        </div>
+        <div class="benefit-item">
+            <h3>Cost Effective</h3>
+            <p>Bundled pricing provides better value than buying individual peptides separately</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="research-peptides.html">Research Peptides</a>
+            <a href="stacks.html">Stacks</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="admin.html">Admin</a>
+        </div>
+        <p>&copy; 2024 ForgePeptides. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- CART PANEL -->
+<div class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3>Total: $<span id="total">0</span></h3>
+
+    <button onclick="checkout()">Checkout (WhatsApp)</button>
+    <button onclick="clearCart()" style="margin-top:10px; background:#ff4d4f; color:#fff;">Clear Cart</button>
+</div>
+
+<script src="cart.js"></script>
+
+</body>
+</html>

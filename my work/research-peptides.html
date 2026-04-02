@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Peptides - ForgePeptides</title>
+<link rel="stylesheet" href="research-peptides.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">ForgePeptides</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="research-peptides.html" class="active">Research Peptides</a>
+            <a href="stacks.html">Stacks</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+            <a href="about.html">About Us</a>
+        </div>
+        <div class="nav-buttons">
+            <div class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="count">0</span>)</div>
+            <a href="auth.html" class="signin-btn">Sign In</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Research Peptides</h1>
+    <p>Premium research-grade peptides for performance enhancement and recovery</p>
+</section>
+
+<section class="lab-verify">
+    <div class="lab-box">
+        <h2>Laboratory Test Verification</h2>
+        <p>All batches are independently tested by third-party pharmaceutical laboratories. Certificates of Analysis (CoA), HPLC purity reports, and QR authentication codes are available on demand.</p>
+        <ul>
+            <li>Purity guarantee: 98%+ - 99.9%</li>
+            <li>Microbial safety checks passed</li>
+            <li>Endotoxin tested and within pharmaceutical thresholds</li>
+            <li>Storage and handling recommendations included with each order</li>
+        </ul>
+    </div>
+</section>
+
+<section class="products">
+    <h2>Our Products</h2>
+    <p class="subtext">Each product is formulated and labeled with precise dosage and purity values. Browse professionally curated research-grade peptides designed for laboratory studies.</p>
+    <div class="grid">
+
+        <div class="card">
+            <h3>GHK-Cu</h3>
+            <div class="price">$75</div>
+            <div class="specs">10mg • 99%+ Purity</div>
+            <div class="description">
+                Copper tripeptide known for its anti-aging properties, wound healing, and skin regeneration. Research shows benefits for hair growth and tissue repair.
+            </div>
+            <button onclick="addToCart('GHK-Cu',75)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>BPC-157</h3>
+            <div class="price">$120</div>
+            <div class="specs">15mg • 99%+ Purity</div>
+            <div class="description">
+                Body Protection Compound that accelerates healing of tendons, ligaments, muscles, and skin. Known for its regenerative properties and injury recovery.
+            </div>
+            <button onclick="addToCart('BPC-157',120)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>TB-500</h3>
+            <div class="price">$110</div>
+            <div class="specs">10mg • 99%+ Purity</div>
+            <div class="description">
+                Thymosin Beta-4 peptide that promotes healing, reduces inflammation, and enhances tissue repair. Research indicates benefits for muscle recovery and endurance.
+            </div>
+            <button onclick="addToCart('TB-500',110)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>CJC-1295</h3>
+            <div class="price">$140</div>
+            <div class="specs">5mg • 99%+ Purity</div>
+            <div class="description">
+                Growth hormone secretagogue that increases GH production. Research shows benefits for muscle growth, fat loss, and recovery from intense training.
+            </div>
+            <button onclick="addToCart('CJC-1295',140)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>Ipamorelin</h3>
+            <div class="price">$130</div>
+            <div class="specs">5mg • 99%+ Purity</div>
+            <div class="description">
+                Selective growth hormone secretagogue that stimulates GH release. Known for its ability to promote lean muscle growth and fat metabolism.
+            </div>
+            <button onclick="addToCart('Ipamorelin',130)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>MGF (Mechano Growth Factor)</h3>
+            <div class="price">$150</div>
+            <div class="specs">5mg • 98%+ Purity</div>
+            <div class="description">
+                Muscle repair peptide that activates satellite cells for muscle regeneration. Research indicates accelerated recovery and hypertrophy benefits.
+            </div>
+            <button onclick="addToCart('MGF',150)">Add to Cart</button>
+        </div>
+
+        <!-- HIGH-DEMAND RESEARCH PEPTIDES -->
+        <div class="card">
+            <h3>Semaglutide (GLP-1)</h3>
+            <div class="price">$280</div>
+            <div class="specs">30mg • 99.9% Purity</div>
+            <div class="description">
+                GLP-1 receptor agonist renowned for metabolic research. Studies show significant benefits for weight management, glucose regulation, and metabolic health.
+            </div>
+            <button onclick="addToCart('Semaglutide (GLP-1)',280)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>Tirzepatide</h3>
+            <div class="price">$320</div>
+            <div class="specs">25mg • 99.9% Purity</div>
+            <div class="description">
+                Dual GLP-1/GIP receptor agonist. Research indicates superior metabolic effects compared to single agonists, with enhanced weight loss and glycemic control.
+            </div>
+            <button onclick="addToCart('Tirzepatide',320)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>PT-141 (Bremelanotide)</h3>
+            <div class="price">$180</div>
+            <div class="specs">20mg • 99%+ Purity</div>
+            <div class="description">
+                Melanocortin receptor agonist studied for sexual wellness and arousal research. Known for its unique mechanism of action in neural pathways.
+            </div>
+            <button onclick="addToCart('PT-141 (Bremelanotide)',180)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>AOD-9604</h3>
+            <div class="price">$160</div>
+            <div class="specs">20mg • 99%+ Purity</div>
+            <div class="description">
+                HGH fragment specifically designed for adipose tissue research. Studies focus on targeted fat metabolism without affecting growth or blood glucose.
+            </div>
+            <button onclick="addToCart('AOD-9604',160)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>Tesamorelin</h3>
+            <div class="price">$220</div>
+            <div class="specs">15mg • 99%+ Purity</div>
+            <div class="description">
+                Growth hormone releasing hormone analog. Research applications include metabolic studies and visceral adipose tissue reduction.
+            </div>
+            <button onclick="addToCart('Tesamorelin',220)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>Selank</h3>
+            <div class="price">$95</div>
+            <div class="specs">15mg • 99%+ Purity</div>
+            <div class="description">
+                Nootropic peptide with anxiolytic properties. Research explores cognitive enhancement, stress reduction, and neurotransmitter regulation.
+            </div>
+            <button onclick="addToCart('Selank',95)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>Epithalamin (Epitalon)</h3>
+            <div class="price">$125</div>
+            <div class="specs">15mg • 99%+ Purity</div>
+            <div class="description">
+                Telomerase activator studied for anti-aging research. Investigations focus on cellular longevity, DNA protection, and age-related conditions.
+            </div>
+            <button onclick="addToCart('Epithalamin (Epitalon)',125)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>Thymosin Alpha-1</h3>
+            <div class="price">$170</div>
+            <div class="specs">15mg • 99%+ Purity</div>
+            <div class="description">
+                Immune system modulator. Research applications include immune enhancement, viral infection studies, and autoimmune condition investigations.
+            </div>
+            <button onclick="addToCart('Thymosin Alpha-1',170)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>PEG-MGF</h3>
+            <div class="price">$190</div>
+            <div class="specs">5mg • 98%+ Purity</div>
+            <div class="description">
+                Pegylated Mechano Growth Factor with extended half-life. Research indicates prolonged muscle repair activation and enhanced recovery protocols.
+            </div>
+            <button onclick="addToCart('PEG-MGF',190)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>GHRP-6</h3>
+            <div class="price">$115</div>
+            <div class="specs">10mg • 99%+ Purity</div>
+            <div class="description">
+                Growth hormone releasing peptide that stimulates appetite and GH release. Research explores metabolic effects and growth hormone pathways.
+            </div>
+            <button onclick="addToCart('GHRP-6',115)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>IGF-1 LR3</h3>
+            <div class="price">$250</div>
+            <div class="specs">5mg • 99%+ Purity</div>
+            <div class="description">
+                Long-acting Insulin-like Growth Factor analog. Studies focus on muscle hypertrophy, tissue repair, and anabolic signaling pathways.
+            </div>
+            <button onclick="addToCart('IGF-1 LR3',250)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>MT-II (Melanotan II)</h3>
+            <div class="price">$105</div>
+            <div class="specs">10mg • 99%+ Purity</div>
+            <div class="description">
+                Melanocortin receptor agonist. Research applications include pigmentation studies, photoprotection, and appetite regulation.
+            </div>
+            <button onclick="addToCart('MT-II (Melanotan II)',105)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>DSIP</h3>
+            <div class="price">$100</div>
+            <div class="specs">10mg • 99%+ Purity</div>
+            <div class="description">
+                Delta sleep-inducing peptide. Research explores sleep regulation, stress response modulation, and neuroprotective properties.
+            </div>
+            <button onclick="addToCart('DSIP',100)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>CJC-1295/Ipamorelin Combo</h3>
+            <div class="price">$240</div>
+            <div class="specs">5mg/5mg • 99%+ Purity</div>
+            <div class="description">
+                Popular combination of growth hormone secretagogues. Research indicates synergistic effects for enhanced GH release and metabolic benefits.
+            </div>
+            <button onclick="addToCart('CJC-1295/Ipamorelin Combo',240)">Add to Cart</button>
+        </div>
+
+        <div class="card">
+            <h3>CPC-157</h3>
+            <div class="price">$135</div>
+            <div class="specs">10mg • 99%+ Purity</div>
+            <div class="description">
+                Body Protection Compound variant with enhanced stability. Research focuses on gastrointestinal healing, tissue repair, and regenerative medicine.
+            </div>
+            <button onclick="addToCart('CPC-157',135)">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="info-section">
+    <h2>Research Disclaimer</h2>
+    <div class="info-content">
+        <p>These products are for research purposes only and are not intended for human consumption. All information provided is for educational purposes and should not be considered medical advice. Please consult with healthcare professionals before considering any peptide therapy.</p>
+        <p>Our peptides are sourced from reputable manufacturers and undergo rigorous quality testing. We prioritize purity, potency, and safety in all our products.</p>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="research-peptides.html">Research Peptides</a>
+            <a href="stacks.html">Stacks</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="admin.html">Admin</a>
+        </div>
+        <p>&copy; 2026 ForgePeptides. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- CART PANEL -->
+<div class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3>Total: $<span id="total">0</span></h3>
+
+    <button onclick="checkout()">Checkout (WhatsApp)</button>
+    <button onclick="clearCart()" style="margin-top:10px; background:#ff4d4f; color:#fff;">Clear Cart</button>
+</div>
+
+<script src="cart.js"></script>
+
+</body>
+</html>

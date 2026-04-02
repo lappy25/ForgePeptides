@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - ForgePeptides</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">ForgePeptides</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="research-peptides.html">Research Peptides</a>
+            <a href="stacks.html">Stacks</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+            <a href="about.html">About Us</a>
+        </div>
+        <div class="nav-buttons">
+            <div class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="count">0</span>)</div>
+            <a href="auth.html" class="signin-btn">Sign In</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Elite Peptides Store</h1>
+    <p>Premium compounds for performance & recovery</p>
+    <a href="research-peptides.html" class="cta-button">Shop Now</a>
+</section>
+
+<section class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>🔬 Premium Quality</h3>
+            <p>Research-grade peptides sourced from trusted manufacturers with rigorous quality control and certifications.</p>
+        </div>
+        <div class="feature-card">
+            <h3>🚚 Fast Shipping</h3>
+            <p>Discreet packaging and worldwide shipping with tracking for all orders. Quick delivery to your doorstep.</p>
+        </div>
+        <div class="feature-card">
+            <h3>💬 Expert Support</h3>
+            <p>Professional guidance and comprehensive educational resources to help you make informed decisions.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIALS SECTION -->
+<section class="testimonials">
+    <h2>Client Testimonials</h2>
+    <p class="testimonials-subtitle">Real feedback from satisfied customers</p>
+    <div class="testimonials-grid">
+        <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Outstanding quality and incredibly fast shipping. The peptides arrived well-packaged and in perfect condition. Highly recommend ForgePeptides for anyone serious about their research."</p>
+            <div class="reviewer-info">
+                <img src="https://ui-avatars.com/api/?name=James+M&background=00e5ff&color=000&bold=true&size=50" alt="James M" class="reviewer-avatar">
+                <div class="reviewer-details">
+                    <p class="reviewer-name">James M.</p>
+                    <p class="reviewer-location">USA</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Excellent customer service and very knowledgeable team. They answered all my questions thoroughly. The product quality is top-notch and the stacks are perfectly formulated."</p>
+            <div class="reviewer-info">
+                <img src="https://ui-avatars.com/api/?name=Sarah+H&background=00e5ff&color=000&bold=true&size=50" alt="Sarah H" class="reviewer-avatar">
+                <div class="reviewer-details">
+                    <p class="reviewer-name">Sarah H.</p>
+                    <p class="reviewer-location">Canada</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Been ordering from ForgePeptides for over a year. Consistent quality, reliable service, and competitive pricing. They've become my go-to peptide supplier. Trust is earned, and they've earned mine."</p>
+            <div class="reviewer-info">
+                <img src="https://ui-avatars.com/api/?name=Michael+K&background=00e5ff&color=000&bold=true&size=50" alt="Michael K" class="reviewer-avatar">
+                <div class="reviewer-details">
+                    <p class="reviewer-name">Michael K.</p>
+                    <p class="reviewer-location">UK</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"The Research Peptides collection is comprehensive and well-organized. I appreciate the detailed product descriptions. Pricing is fair and the quality is undeniable. Five stars!"</p>
+            <div class="reviewer-info">
+                <img src="https://ui-avatars.com/api/?name=Alex+J&background=00e5ff&color=000&bold=true&size=50" alt="Alex J" class="reviewer-avatar">
+                <div class="reviewer-details">
+                    <p class="reviewer-name">Alex J.</p>
+                    <p class="reviewer-location">Australia</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"The peptide stacks are scientifically formulated and save me so much research time. Excellent value for money. Customer support is responsive and helpful. Highly satisfied!"</p>
+            <div class="reviewer-info">
+                <img src="https://ui-avatars.com/api/?name=Rachel+P&background=00e5ff&color=000&bold=true&size=50" alt="Rachel P" class="reviewer-avatar">
+                <div class="reviewer-details">
+                    <p class="reviewer-name">Rachel P.</p>
+                    <p class="reviewer-location">Germany</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="review-text">"Professional operation from start to finish. Products are authentic and properly labeled. The WhatsApp ordering system is convenient. Will definitely order again!"</p>
+            <div class="reviewer-info">
+                <img src="https://ui-avatars.com/api/?name=Thomas+C&background=00e5ff&color=000&bold=true&size=50" alt="Thomas C" class="reviewer-avatar">
+                <div class="reviewer-details">
+                    <p class="reviewer-name">Thomas C.</p>
+                    <p class="reviewer-location">EU</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="research-peptides.html">Research Peptides</a>
+            <a href="stacks.html">Stacks</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="admin.html">Admin</a>
+        </div>
+        <p>&copy; 2026 ForgePeptides. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- CART PANEL -->
+<div class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3>Total: $<span id="total">0</span></h3>
+
+    <button onclick="checkout()">Checkout (WhatsApp)</button>
+    <button onclick="clearCart()" style="margin-top:10px; background:#ff4d4f; color:#fff;">Clear Cart</button>
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - ForgePeptides</title>
+<link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">ForgePeptides</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="research-peptides.html">Research Peptides</a>
+            <a href="stacks.html">Stacks</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <div style="display: flex; gap: 15px; align-items: center;">
+            <div class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="count">0</span>)</div>
+            <button class="logout-btn" onclick="handleLogout()">Logout</button>
+        </div>
+    </div>
+</nav>
+
+<section class="dashboard">
+    <div class="dashboard-header">
+        <h1>Welcome, <span id="userName">User</span>!</h1>
+        <p>Manage your account and orders</p>
+    </div>
+
+    <div class="dashboard-grid">
+        <!-- USER PROFILE -->
+        <div class="dashboard-card">
+            <h2>📋 Profile Information</h2>
+            <div class="profile-info">
+                <p><strong>Name:</strong> <span id="profileName">-</span></p>
+                <p><strong>Email:</strong> <span id="profileEmail">-</span></p>
+                <p><strong>Member Since:</strong> <span id="profileDate">-</span></p>
+                <p><strong>Loyalty Points:</strong> <span id="loyaltyPoints">0</span></p>
+            </div>
+            <button onclick="editProfile()" class="action-btn">Edit Profile</button>
+        </div>
+
+        <!-- RECENT ORDERS -->
+        <div class="dashboard-card">
+            <h2>📦 Recent Orders</h2>
+            <div id="recentOrders" class="orders-list">
+                <p>No orders yet. <a href="research-peptides.html">Start shopping</a></p>
+            </div>
+        </div>
+
+        <!-- LOYALTY REWARDS -->
+        <div class="dashboard-card">
+            <h2>🎁 Loyalty Rewards</h2>
+            <div class="rewards-info">
+                <div class="reward-item">
+                    <span>Lifetime Points: <strong id="totalPoints">0</strong></span>
+                </div>
+                <div class="reward-item">
+                    <span>Next Reward: <strong id="nextReward">100 points</strong></span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+            </div>
+            <button onclick="viewRewards()" class="action-btn">View Rewards</button>
+        </div>
+
+        <!-- QUICK ACTIONS -->
+        <div class="dashboard-card">
+            <h2>⚡ Quick Actions</h2>
+            <div class="action-buttons">
+                <button onclick="window.location.href='research-peptides.html'" class="quick-btn">🛍️ Shop Peptides</button>
+                <button onclick="window.location.href='stacks.html'" class="quick-btn">📚 View Stacks</button>
+                <button onclick="window.location.href='contact.html'" class="quick-btn">💬 Contact Support</button>
+                <button onclick="window.location.href='faq.html'" class="quick-btn">❓ View FAQ</button>
+            </div>
+        </div>
+
+        <!-- ACCOUNT SETTINGS -->
+        <div class="dashboard-card">
+            <h2>⚙️ Account Settings</h2>
+            <div class="settings-list">
+                <button onclick="changePassword()" class="setting-btn">Change Password</button>
+                <button onclick="manageSavedAddresses()" class="setting-btn">Saved Addresses</button>
+                <button onclick="managePaymentMethods()" class="setting-btn">Payment Methods</button>
+                <button onclick="notificationSettings()" class="setting-btn">Notifications</button>
+            </div>
+        </div>
+
+        <!-- SUPPORT -->
+        <div class="dashboard-card">
+            <h2>🆘 Support & Help</h2>
+            <p>Need help? Check our FAQ or contact our support team.</p>
+            <div class="support-buttons">
+                <a href="faq.html" class="support-link">📖 View FAQ</a>
+                <a href="contact.html" class="support-link">📧 Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CART PANEL -->
+<div class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3>Total: $<span id="total">0</span></h3>
+    <button onclick="checkout()">Checkout (WhatsApp)</button>
+    <button onclick="clearCart()" style="margin-top:10px; background:#ff4d4f; color:#fff;">Clear Cart</button>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="research-peptides.html">Research Peptides</a>
+            <a href="stacks.html">Stacks</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <p>&copy; 2026 ForgePeptides. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="cart.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - ForgePeptides</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">ForgePeptides</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="research-peptides.html">Research Peptides</a>
+            <a href="stacks.html">Stacks</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+            <a href="about.html" class="active">About Us</a>
+        </div>
+        <div class="nav-buttons">
+            <div class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="count">0</span>)</div>
+            <a href="auth.html" class="signin-btn">Sign In</a>
+        </div>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>About ForgePeptides</h1>
+    <p>Trusted peptide provider delivering research-grade quality, lab traceability, and regulatory-focused operations.</p>
+</section>
+
+<section class="features">
+    <h2>Our Mission</h2>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>🔬 Scientific Integrity</h3>
+            <p>We offer only verified peptide compounds with full Certificate of Analysis (CoA), high-purity testing, and transparent documentation.</p>
+        </div>
+        <div class="feature-card">
+            <h3>✅ Compliance First</h3>
+            <p>Our products are distributed for research use only and aligned with responsible lab and institutional policies.</p>
+        </div>
+        <div class="feature-card">
+            <h3>🚀 Innovation Support</h3>
+            <p>We partner with researchers and labs to accelerate discoveries in regenerative medicine and metabolic research.</p>
+        </div>
+    </div>
+</section>
+
+<section class="about-content">
+    <h2>Who We Are</h2>
+    <p>ForgePeptides is a specialist supplier of pharmaceutical-grade peptides, founded in 2023 by scientific entrepreneurs with extensive experience in bioanalytics, peptide chemistry, and clinical research supply chain management.</p>
+    <p>Our team combines industry-grade manufacturing oversight, ISO-accredited testing, and end-to-end traceability across all orders.</p>
+</section>
+
+<section class="about-values">
+    <h2>What Drives Us</h2>
+    <ul>
+        <li>Integrity in quality and delivery</li>
+        <li>Research-orientated education is central</li>
+        <li>Evidence-based formulation and dose guidance</li>
+        <li>Fast, discreet support for academic and lab projects</li>
+    </ul>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="research-peptides.html">Research Peptides</a>
+            <a href="stacks.html">Stacks</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+            <a href="about.html">About Us</a>
+            <a href="admin.html">Admin</a>
+        </div>
+        <p>&copy; 2026 ForgePeptides. All rights reserved.</p>
+    </div>
+</footer>
+
+<div class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3>Total: $<span id="total">0</span></h3>
+    <button onclick="checkout()">Checkout (WhatsApp)</button>
+    <button onclick="clearCart()" style="margin-top:10px; background:#ff4d4f; color:#fff;">Clear Cart</button>
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>

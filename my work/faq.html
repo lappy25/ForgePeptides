@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ - ForgePeptides</title>
+<link rel="stylesheet" href="faq.css">
+</head>
+
+<body>
+
+<nav>
+    <div class="nav-container">
+        <a href="index.html" class="logo">ForgePeptides</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="research-peptides.html">Research Peptides</a>
+            <a href="stacks.html">Stacks</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="about.html">About Us</a>
+        </div>
+        <div class="nav-buttons">
+            <div class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="count">0</span>)</div>
+            <a href="auth.html" class="signin-btn">Sign In</a>
+        </div>
+    </div>
+</nav>
+
+<section class="faq-hero">
+    <h1>Frequently Asked Questions</h1>
+    <p>Find answers to common questions about our products and services</p>
+</section>
+
+<section class="faq-container">
+    <div class="faq-grid">
+        <!-- ABOUT PEPTIDES -->
+        <div class="faq-category">
+            <h2>📋 About Peptides</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What are peptides?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Peptides are short chains of amino acids that are the building blocks of proteins. They play crucial roles in muscle growth, fat loss, recovery, and overall cellular function. Our research peptides are designed for scientific study and personal research purposes.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Are your peptides of high quality?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! All our peptides are sourced from reputable suppliers and are manufactured under strict quality control standards. We test each batch for purity and potency to ensure the highest quality for our customers.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What's the difference between your peptides?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Each peptide has unique benefits and mechanisms of action. For example, BPC-157 supports tissue healing, Sermorelin promotes natural growth hormone release, and TB-500 aids in injury recovery. Visit our Research Peptides page for detailed information on each one.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What are peptide stacks?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Peptide stacks are carefully curated combinations of complementary peptides designed to work synergistically. These pre-made stacks help you achieve specific goals like fat loss, muscle gain, or overall wellness more effectively than single peptides.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ORDERING & SHIPPING -->
+        <div class="faq-category">
+            <h2>📦 Ordering & Shipping</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How do I place an order?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>1. Browse our products and add items to your cart
+                        <br>2. Sign in or register for an account
+                        <br>3. Review your cart and proceed to checkout
+                        <br>4. Complete your order via WhatsApp
+                        <br>5. Our team will confirm and process your order</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Where do you ship?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We ship worldwide! Shipping costs and delivery times vary depending on your location. Most orders are shipped within 2-3 business days. International orders typically arrive within 7-14 business days.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What are your shipping times?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Processing: 1-2 business days
+                        <br>Domestic Shipping: 3-7 business days
+                        <br>International Shipping: 7-21 business days
+                        <br>
+                        <br>You'll receive tracking information via email once your order ships.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do you offer free shipping?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Free shipping is available on orders over $200. Our loyalty members with 1000+ points also receive free shipping. Check your order summary for shipping costs before completing your purchase.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can I track my order?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Once your order ships, you'll receive a tracking number via email. You can use this to track your package in real-time with your carrier. Visit your dashboard to view all orders and their status.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PAYMENTS & RETURNS -->
+        <div class="faq-category">
+            <h2>💳 Payments & Returns</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What payment methods do you accept?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept multiple payment methods including:
+                        <br>• Apple Pay, Chime, Google Pay
+                        <br>• Bank Transfers
+                        <br>• PayPal, Cash APP, Zelle 
+                        <br>• Cryptocurrency (Bitcoin, Ethereum)
+                        <br>
+                        <br>Payment details are shared securely during checkout via WhatsApp.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Is my payment information secure?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We use industry-standard encryption and security protocols to protect your payment information. We do not store credit card details on our servers. All transactions are processed securely through WhatsApp.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What is your return policy?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a 30-day money-back guarantee on all unopened products. If you're not satisfied, contact our support team for a full refund. Products must be in original, unopened condition. Please note that opened or used peptides cannot be returned for health and safety reasons.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How long is the refund process?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Once we receive your return, we'll process it within 5-7 business days. Your refund will be issued to your original payment method and typically appears within 3-5 business days, depending on your bank.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ACCOUNT & LOYALTY -->
+        <div class="faq-category">
+            <h2>👤 Account & Loyalty</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do I need an account to order?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>While you can inquire about products without an account, we recommend creating one to track orders, save preferences, and earn loyalty points. Creating an account is quick and free!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What is the Loyalty Program?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our Loyalty Program rewards you for every purchase:
+                        <br>• Earn 10 points per $1 spent
+                        <br>• 100 points = $5 discount
+                        <br>• 500 points = $30 discount
+                        <br>• 1000 points = Free shipping
+                        <br>
+                        <br>Points accumulate in your account and never expire!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How do I reset my password?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Visit our Sign In page and click "Forgot Password?" You'll receive an email with instructions to reset your password. For security reasons, we'll verify your identity before allowing changes. If you don't receive an email, check your spam folder or contact support.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How do I update my account information?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Log in to your account and visit the Dashboard. From there, you can update your profile information, change your password, manage saved addresses, and update payment methods. Any changes are saved immediately.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PRODUCT INFORMATION -->
+        <div class="faq-category">
+            <h2>🧪 Product Information</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How should I store my peptides?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Store peptides in a cool, dry place away from direct sunlight. Most peptides should be refrigerated (2-8°C) after reconstitution. Keep them in airtight containers and away from moisture. Properly stored peptides remain potent for up to 24 months.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What is the shelf life of peptides?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Unopened peptides have a shelf life of 24-36 months when stored properly. Once reconstituted, they should be used within 14-30 days depending on the specific peptide. Always check the expiration date on your package.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How is peptide purity verified?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Every batch carries a third-party Certificate of Analysis (CoA) measuring purity via HPLC, mass spectrometry, and sterility tests. Purity thresholds are 98%+ for standard peptides and 99%+ for premium compounds. You may request the full report for your batch. </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How do I know the peptides are genuine?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All our peptides come with a Certificate of Analysis (CoA) from third-party labs. Each batch is tested for purity and potency. We also provide a QR code for authentication. If you have any concerns, contact our support team with your batch number.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can I combine different peptides?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Many peptides work well together. However, certain combinations may be more synergistic. Our pre-made stacks are scientifically formulated for optimal results. For custom combinations, consult our team for personalized recommendations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SUPPORT & CONTACT -->
+        <div class="faq-category">
+            <h2>🆘 Support & Contact</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How do I contact support?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can reach our support team through:
+                        <br>• WhatsApp: Direct messaging
+                        <br>• Email: Via contact form
+                        <br>• Live Chat: On our website
+                        <br>
+                        <br>We respond to all inquiries within 24 hours. Our support team is available 24/7 to help you!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>What are your business hours?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We operate 24/7 to serve customers worldwide. However, our response times may be slightly longer during off-peak hours. For urgent matters, please reach out via WhatsApp for immediate assistance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do you offer customer support in other languages?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! Our support team speaks multiple languages including English, Spanish, French, and German. Let us know your preferred language when you contact us.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Do you offer bulk discounts?</span>
+                        <span class="arrow">▶</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer competitive discounts for bulk orders. Contact our sales team for a custom quote. Bulk orders typically include volume discounts, priority shipping, and dedicated support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT CTA -->
+    <div class="contact-cta">
+        <h2>Didn't find your answer?</h2>
+        <p>Our expert team is ready to help. Contact us anytime!</p>
+        <div class="cta-buttons">
+            <a href="contact.html" class="cta-btn primary">📧 Contact Us</a>
+            <a href="https://wa.me" class="cta-btn secondary">💬 WhatsApp</a>
+        </div>
+    </div>
+</section>
+
+<!-- CART PANEL -->
+<div class="cart" id="cart">
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+    <h3>Total: $<span id="total">0</span></h3>
+    <button onclick="checkout()">Checkout (WhatsApp)</button>
+    <button onclick="clearCart()" style="margin-top:10px; background:#ff4d4f; color:#fff;">Clear Cart</button>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="research-peptides.html">Research Peptides</a>
+            <a href="stacks.html">Stacks</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+        <p>&copy; 2026 ForgePeptides. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="cart.js"></script>
+<script src="faq.js"></script>
+</body>
+</html>
